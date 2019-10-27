@@ -22,6 +22,8 @@ namespace ClassLibraryDAL
                 using (SqlConnection cn = new SqlConnection(connectionString))
                 {
                     string query = "SELECT * FROM FileDemo WHERE Filename = @Filename";
+
+
                     SqlCommand cmd = new SqlCommand(query, cn);
                     cmd.Parameters.AddWithValue("@Filename", filename);
                     cn.Open();
